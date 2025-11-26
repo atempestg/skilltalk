@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX 디자인 프로세스 심층 분석 Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, #e2e8f0 0%, #6366f1 50%, #e2e8f0 100%);
+            margin: 3rem 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Top Navigation / Progress -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+        <div class="h-full bg-indigo-600 w-1/3"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 py-12">
+        
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Professional Guide</span>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 leading-tight">UI/UX 산출물:<br>언제, 무엇을, 왜 만드는가?</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto">와이어프레임, 목업, 프로토타입의 실무적 차이와<br>IT 프로젝트 단계별 전략적 활용 가이드</p>
+        </header>
+
+        <!-- Section 1: 3 Major Artifacts (Visual Cards) -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center text-slate-800">
+                <span class="bg-slate-800 text-white w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">01</span>
+                핵심 개념 시각화
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Wireframe -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="h-3 bg-gray-400"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-700">Wireframe</h3>
+                            <i class="fas fa-drafting-compass text-2xl text-gray-300 group-hover:text-gray-500 transition-colors"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-6 min-h-[40px]">건축 설계도. 정보 구조와 배치를 결정하는 뼈대.</p>
+                        <div class="bg-gray-100 rounded-lg p-4 border border-dashed border-gray-300 aspect-video flex flex-col gap-2 justify-center">
+                            <div class="h-2 bg-gray-300 w-1/2 rounded"></div>
+                            <div class="h-12 bg-gray-200 w-full rounded"></div>
+                            <div class="flex gap-2">
+                                <div class="h-6 bg-gray-300 w-1/3 rounded"></div>
+                                <div class="h-6 bg-gray-300 w-1/3 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mockup -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="h-3 bg-blue-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-700">Mockup</h3>
+                            <i class="fas fa-palette text-2xl text-blue-200 group-hover:text-blue-500 transition-colors"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-6 min-h-[40px]">모델 하우스. 실제 마감재와 인테리어가 적용된 모습.</p>
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-100 aspect-video flex flex-col gap-2 justify-center relative overflow-hidden">
+                            <div class="h-2 bg-blue-600 w-1/2 rounded shadow-sm z-10"></div>
+                            <div class="h-12 bg-white w-full rounded shadow flex items-center justify-center text-blue-300 text-xs z-10"><i class="fas fa-image mr-1"></i> IMG</div>
+                            <div class="flex gap-2 z-10">
+                                <div class="h-6 bg-blue-500 w-1/3 rounded text-[8px] text-white flex items-center justify-center">BTN</div>
+                                <div class="h-6 bg-white border border-blue-200 w-1/3 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prototype -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="h-3 bg-green-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-green-700">Prototype</h3>
+                            <i class="fas fa-fingerprint text-2xl text-green-200 group-hover:text-green-500 transition-colors"></i>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-6 min-h-[40px]">시운전 차량. 실제로 탑승하고 조작해볼 수 있는 단계.</p>
+                        <div class="bg-slate-900 rounded-lg p-4 border border-slate-700 aspect-video flex flex-col gap-2 justify-center relative cursor-pointer group-hover:scale-105 transition-transform duration-300">
+                             <div class="absolute inset-0 flex items-center justify-center">
+                                 <div class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-bounce">Clickable</div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Detailed Comparison Table -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center text-slate-800">
+                <span class="bg-slate-800 text-white w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">02</span>
+                상세 스펙 비교 (실무 관점)
+            </h2>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-gray-200">
+                <table class="w-full text-sm text-left text-gray-600">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b border-gray-200">
+                        <tr>
+                            <th class="px-6 py-4 font-black w-1/4">구분</th>
+                            <th class="px-6 py-4 text-gray-500 font-bold w-1/4">와이어프레임</th>
+                            <th class="px-6 py-4 text-blue-600 font-bold w-1/4">목업 (Mockup)</th>
+                            <th class="px-6 py-4 text-green-600 font-bold w-1/4">프로토타입</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-gray-50">
+                            <th class="px-6 py-4 font-bold text-gray-800 bg-gray-50/50">핵심 가치 (Value)</th>
+                            <td class="px-6 py-4">정보 구조의 합의</td>
+                            <td class="px-6 py-4">브랜드 아이덴티티 시각화</td>
+                            <td class="px-6 py-4">사용자 경험(UX) 검증</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <th class="px-6 py-4 font-bold text-gray-800 bg-gray-50/50">수정 비용 (Cost)</th>
+                            <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">매우 낮음</span><br><span class="text-xs text-gray-400">박스만 옮기면 됨</span></td>
+                            <td class="px-6 py-4"><span class="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs font-bold">높음</span><br><span class="text-xs text-gray-400">픽셀 단위 수정 필요</span></td>
+                            <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs font-bold">중간 ~ 높음</span><br><span class="text-xs text-gray-400">로직 수정 시 복잡</span></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <th class="px-6 py-4 font-bold text-gray-800 bg-gray-50/50">주요 승인권자</th>
+                            <td class="px-6 py-4">PM, 기획팀장, 백엔드 개발자</td>
+                            <td class="px-6 py-4">클라이언트, 마케터, BX팀</td>
+                            <td class="px-6 py-4">실 사용자(End User), 투자자</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <th class="px-6 py-4 font-bold text-gray-800 bg-gray-50/50">산출물 포맷</th>
+                            <td class="px-6 py-4">PDF, PPT, 화이트보드 사진</td>
+                            <td class="px-6 py-4">JPG, PNG, 제플린/피그마 링크</td>
+                            <td class="px-6 py-4">웹 링크(URL), 앱 설치파일(APK)</td>
+                        </tr>
+                         <tr class="hover:bg-gray-50">
+                            <th class="px-6 py-4 font-bold text-gray-800 bg-gray-50/50">커뮤니케이션 대사</th>
+                            <td class="px-6 py-4">"데이터가 여기에 노출됩니다"</td>
+                            <td class="px-6 py-4">"색감과 폰트는 이렇습니다"</td>
+                            <td class="px-6 py-4">"화면 전환이 이렇게 됩니다"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: Process Deep Dive (Timeline) -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center text-slate-800">
+                <span class="bg-slate-800 text-white w-8 h-8 rounded-lg flex items-center justify-center mr-3 text-sm">03</span>
+                실무 프로세스별 활용 시점
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Agile Process -->
+                <div class="bg-indigo-50/50 rounded-xl p-8 border border-indigo-100 relative">
+                     <span class="absolute top-4 right-4 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">추천: 스타트업/서비스</span>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-6 border-b border-indigo-200 pb-2">Agile / Scrum (2주 스프린트)</h3>
+                    
+                    <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-indigo-300 before:to-transparent">
+                        <!-- Step 1 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-indigo-300 bg-white text-indigo-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold">D1</div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-lg shadow-sm border border-indigo-100">
+                                <div class="font-bold text-indigo-700 text-sm">킥오프 & 화이트보드</div>
+                                <div class="text-xs text-gray-500 mt-1">PM/기획자 주도. 손그림이나 Whimsical로 핵심 로직만 빠르게 합의.</div>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-indigo-300 bg-white text-indigo-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold">D3</div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-lg shadow-sm border border-indigo-100">
+                                <div class="font-bold text-indigo-700 text-sm">목업 & Lo-Fi 프로토타입</div>
+                                <div class="text-xs text-gray-500 mt-1">Figma로 디자인 잡으면서 바로 클릭 연결. 개발자는 이 시점부터 구조 설계 시작.</div>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-indigo-300 bg-white text-indigo-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold">D7</div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-lg shadow-sm border border-indigo-100">
+                                <div class="font-bold text-indigo-700 text-sm">Hi-Fi 프로토타입 & 개발</div>
+                                <div class="text-xs text-gray-500 mt-1">실제와 같은 인터랙션 완성. QA팀 테스트 케이스 작성 시작.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Waterfall Process -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 relative opacity-80">
+                    <span class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">SI / 에이전시</span>
+                    <h3 class="text-xl font-bold text-gray-700 mb-6 border-b border-gray-200 pb-2">Waterfall (순차적 진행)</h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <div class="flex flex-col items-center">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-gray-600 text-sm">1</div>
+                                <div class="h-full w-0.5 bg-gray-200 my-1"></div>
+                            </div>
+                            <div class="pb-6">
+                                <h4 class="font-bold text-gray-700 text-sm">기획 완료 (SB 제출)</h4>
+                                <p class="text-xs text-gray-500 mt-1">와이어프레임 100~200페이지 PPT 문서화 및 고객사 승인.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex flex-col items-center">
+                                <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-gray-600 text-sm">2</div>
+                                <div class="h-full w-0.5 bg-gray-200 my-1"></div>
+                            </div>
+                            <div class="pb-6">
+                                <h4 class="font-bold text-gray-700 text-sm">디자인 착수 (목업)</h4>
+                                <p class="text-xs text-gray-500 mt-1">승인된 와이어프레임대로 디자인만 진행. 기능 변경 어려움.</p>
+                            </div>
+                        </li>
+                         <li class="flex gap-4">
+                            <div class="flex flex-col items-center">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600 text-sm">3</div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-700 text-sm">개발 & 감리</h4>
+                                <p class="text-xs text-gray-500 mt-1">프로토타입 생략. 개발 완료 후 테스트 서버에서 처음으로 '작동' 확인.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Why & Risk Management -->
+        <section class="bg-slate-900 rounded-2xl p-8 text-white mb-12 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-6 flex items-center">
+                <i class="fas fa-shield-alt text-yellow-400 mr-3 text-2xl"></i>
+                왜 귀찮게 이걸 다 만들어야 할까? (Risk Management)
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-5xl font-black text-gray-700 mb-2">10x</div>
+                    <div class="text-lg font-bold text-gray-200 mb-2">비용 절감 효과</div>
+                    <p class="text-sm text-gray-400 leading-relaxed">개발 코드를 수정하는 것은 디자인을 수정하는 것보다 10배 이상의 비용이 듭니다. 프로토타입에서 잡은 버그는 '공짜'입니다.</p>
+                </div>
+                <div class="w-px bg-gray-700 hidden md:block"></div>
+                <div class="p-4">
+                    <div class="text-5xl font-black text-gray-700 mb-2">Gap</div>
+                    <div class="text-lg font-bold text-gray-200 mb-2">커뮤니케이션 오류 제거</div>
+                    <p class="text-sm text-gray-400 leading-relaxed">"저는 모달인 줄 알았는데요?"<br>기획서 텍스트의 모호함을 시각물로 없애 개발자와의 인식 차이를 줄입니다.</p>
+                </div>
+                <div class="w-px bg-gray-700 hidden md:block"></div>
+                <div class="p-4">
+                    <div class="text-5xl font-black text-gray-700 mb-2">User</div>
+                    <div class="text-lg font-bold text-gray-200 mb-2">검증 없는 출시는 도박</div>
+                    <p class="text-sm text-gray-400 leading-relaxed">실제 사용자가 어디서 이탈하는지 코딩 전에 알 수 있는 유일한 방법은 프로토타이핑 뿐입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-400 text-sm py-8 border-t border-gray-200">
+            <p>© 2025 IT Product Guide. Created with Gemini.</p>
+        </footer>
+    </div>
+</body>
+</html>
